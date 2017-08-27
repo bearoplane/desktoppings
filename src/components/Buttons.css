@@ -1,0 +1,45 @@
+.Buttons {
+
+}
+
+.Buttons-button {
+  border: none;
+  outline: none;
+  position: absolute;
+  z-index: 150;
+  width: 4rem;
+  height: 4rem;
+  background-color: #fff3e9;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.Buttons-left {
+  left: 0;
+  top: 50%;
+  margin-top: -2rem;
+  background-image: url('/images/left.png');
+}
+.Buttons-left:hover {
+  background-image: url('/images/left_over.png');
+}
+
+.Buttons-right {
+  right: 0;
+  top: 50%;
+  margin-top: -2rem;
+  background-image: url('/images/right.png');
+}
+.Buttons-right:hover {
+  background-image: url('/images/right_over.png');
+}
+
+.Buttons-download {
+  bottom: 0;
+  left: 50%;
+  margin-left: -2rem;
+  background-image: url('/images/download.png');
+}
+.Buttons-download:hover {
+  background-image: url('/images/download_over.png');
+}
