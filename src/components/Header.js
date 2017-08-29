@@ -4,7 +4,11 @@ import './Header.css'
 
 const Header = () => (
   <div className="Header">
-    <h1 className="Header-title">"Desktoppings!" <span className="Header-checkers"></span> by Vicky Lam Photography</h1>
+    <h1 className="Header-title">"Desktoppings!"</h1>
+    <div className="Header-checkers">
+      { new Array(30).fill(true).map(() => <span className="Header-checkers-square"></span>) }
+    </div>
+    <h1 className="Header-title">by Vicky Lam Photography</h1>
     <div className="Header-button-wrap">
       <a href="mailto:vicky@vickylam.com" className="Header-button Header-button-email"></a>
       <a href="http://vickylam.com" target="_blank" className="Header-button Header-button-website"></a>

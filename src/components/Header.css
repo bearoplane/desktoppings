@@ -16,6 +16,7 @@
   left: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   font-size: 1em;
 }
@@ -24,25 +25,31 @@
   color: #ff0045;
   font-family: 'calafiaregular';
   font-weight: normal;
-  padding-left: 1rem;
-  white-space: nowrap;
+  width: auto;
   font-size: 1.6rem;
-  margin-top: 0.9rem;
+  padding: 0 2rem;
 }
 
 .Header-checkers {
   display: inline-block;
+  flex: 1;
+  overflow: hidden;
+  text-align: center;
+  height: 1.1rem;
+}
 
-  width: 0;
-
+.Header-checkers-square {
+  display: inline-block;
+  height: 1.1rem;
+  width: 1.1rem;
   background-size: cover;
   background-image: url('/images/checkers.png');
 }
 
 .Header-button-wrap {
   white-space: nowrap;
-  padding-right: 1rem;
   padding-top: 0.4rem;
+  padding-right: 1.4rem;
 }
 
 .Header-button {
@@ -70,7 +77,7 @@
 .Header-button-website:hover {
   background-image: url('/images/url_over.png');
 }
-
+/*
 @media only screen and (min-width : 480px) {
   .Header-checkers {
     width: 0;
@@ -96,3 +103,4 @@
     width: 22.1rem;
   }
 }
+*/
