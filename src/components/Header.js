@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = () => (
   <div className="Header">
-    <h1 className="Header-title">"Desktoppings!"</h1>
+    <h1 className="Header-title">&ldquo;Desktoppings!&rdquo;</h1>
     <div className="Header-checkers">
       { new Array(30).fill(true).map(() => <span className="Header-checkers-square"></span>) }
     </div>

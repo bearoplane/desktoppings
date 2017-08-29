@@ -1,45 +1,68 @@
-.Buttons {
-
-}
-
 .Buttons-button {
+  position: fixed;
+
+  z-index: 150;
+
+  width: 4.8rem;
+  height: 4.8rem;
+
+  background-color: #fff3e9;
+}
+.Buttons-button button, .Buttons-button a {
+  position: absolute;
+
+  top: 0.8rem;
+  left: 0.8rem;
+
   border: none;
   outline: none;
-  position: absolute;
-  z-index: 150;
-  width: 4rem;
-  height: 4rem;
-  background-color: #fff3e9;
-  background-size: 100% 100%;
   cursor: pointer;
+
+  width: 3.2rem;
+  height: 3.2rem;
+
+  background-color: #fff3e9;
+  background-image: url('/images/sprite.png');
+  background-size: 6.4rem 16rem;
 }
 
 .Buttons-left {
   left: 0;
   top: 50%;
-  margin-top: -2rem;
-  background-image: url('/images/left.png');
+  margin-top: -2.4rem;
+  width: 4.7rem;
 }
-.Buttons-left:hover {
-  background-image: url('/images/left_over.png');
+.Buttons-left button, .Buttons-left a {
+  left: auto;
+  right: 0.8rem;
+  background-position: 0 -6.4rem;
+}
+.Buttons-left button:hover, .Buttons-left a:hover {
+  background-position: -3.2rem -6.4rem;
 }
 
 .Buttons-right {
   right: 0;
   top: 50%;
-  margin-top: -2rem;
-  background-image: url('/images/right.png');
+  margin-top: -2.4rem;
+  width: 4.7rem;
 }
-.Buttons-right:hover {
-  background-image: url('/images/right_over.png');
+.Buttons-right button, .Buttons-right a {
+  left: 0.8rem;
+  background-position: 0 -9.6rem;
+}
+.Buttons-right button:hover, .Buttons-right a:hover {
+  background-position: -3.2rem -9.6rem;
 }
 
 .Buttons-download {
   bottom: 0;
   left: 50%;
-  margin-left: -2rem;
-  background-image: url('/images/download.png');
+  margin-left: -2.4rem;
 }
-.Buttons-download:hover {
-  background-image: url('/images/download_over.png');
+.Buttons-download button, .Buttons-download a {
+  background-position: 0 0;
+}
+.Buttons-download button:hover, .Buttons-download a:hover {
+  background-position: -3.2rem 0;
 }

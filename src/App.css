@@ -1,5 +1,5 @@
 html {
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .App {
@@ -20,7 +20,7 @@ html {
 
 @media only screen and (min-width : 480px) {
   html {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 @media only screen and (min-width : 768px) {
