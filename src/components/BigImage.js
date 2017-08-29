@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+
+import ImageFrame from './ImageFrame'
 
 import './BigImage.css'
 
@@ -28,26 +30,13 @@ class BigImage extends Component {
     const { cur } = this.props
     const { dir } = this.state
 
-    const styles = {
-      display: 'block',
-      position: 'absolute',
-      left: 0,
-      top: 0,
-      zIndex: 1,
-      width: '100%',
-      height: '100%',
-      backgroundColor: '#ff0045',
-      backgroundImage: `url(/images/${cur + 1}.jpg)`,
-      backgroundSize: 'cover'
-    }
-
     return (
       <div>
         <ReactCSSTransitionGroup
           transitionName={`${dir}carousel`}
           transitionEnterTimeout={300}
           transitionLeaveTimeout={300}>
-          <div style={styles} key={cur} />
+          <ImageFrame key={cur} image={`/images/${cur + 1}.jpg`} />
         </ReactCSSTransitionGroup>
       </div>
     )
