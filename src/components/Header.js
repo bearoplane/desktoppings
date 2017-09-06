@@ -6,7 +6,7 @@ const Header = () => (
   <div className="Header">
     <h1 className="Header-title">&ldquo;Desktoppings!&rdquo;</h1>
     <div className="Header-checkers">
-      { new Array(30).fill(true).map(() => <span className="Header-checkers-square"></span>) }
+      { new Array(30).fill(true).map((v, i) => <span key={i} className="Header-checkers-square"></span>) }
     </div>
     <h1 className="Header-title">by Vicky Lam Photography</h1>
     <div className="Header-button-wrap">

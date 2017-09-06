@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { HotKeys } from 'react-hotkeys'
+
 import logo from './logo.svg'
 import './App.css'
 
@@ -9,10 +11,16 @@ import BigImage from './components/BigImage'
 
 const numImages = 7
 
+const map = {
+  'moveLeft': 'left',
+  'moveRight': 'right'
+};
+
 class App extends Component {
   constructor(props) {
     super(props)
 
+    this.busy = false
     this.state = {
       cur: 0
     }
@@ -20,6 +28,12 @@ class App extends Component {
 
   selectImage = (dir) => {
     const { cur } = this.state
+
+    if (this.busy) return
+
+    this.busy = true
+
+    setTimeout(() => { this.busy = false }, 500)
 
     this.setState({
       cur: (cur + dir) < 0 ? numImages - 1 : (cur + dir) % numImages
@@ -29,12 +43,19 @@ class App extends Component {
   render() {
     const { cur } = this.state
 
+    const handlers = {
+      left: e => { e.preventDefault(); this.selectImage(-1); },
+      right: e => { e.preventDefault(); this.selectImage(1) }
+    }
+
     return (
-      <div className="App">
-        <Header />
-        <Buttons cur={cur} selectImage={this.selectImage} />
-        <BigImage cur={cur} />
-      </div>
+      <HotKeys keyMap={map} handlers={handlers}>
+        <div className="App">
+          <Header />
+          <Buttons cur={cur} selectImage={this.selectImage} />
+          <BigImage cur={cur} />
+        </div>
+      </HotKeys>
     )
   }
 }

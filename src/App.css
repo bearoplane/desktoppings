@@ -2,6 +2,10 @@ html {
   font-size: 11px;
 }
 
+body {
+  background-color: #ff0045;
+}
+
 .App {
   text-align: center;
   width: 100%;
