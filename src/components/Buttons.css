@@ -41,7 +41,7 @@
   transition: left 1s;
 }
 .Buttons-left.Buttons-button-hidden {
-  left: -70px;
+  left: -4.2rem;
 }
 .Buttons-left button, .Buttons-left a {
   left: auto;
@@ -60,7 +60,7 @@
   transition: right 1s;
 }
 .Buttons-right.Buttons-button-hidden {
-  right: -70px;
+  right: -4.2rem;
 }
 .Buttons-right button, .Buttons-right a {
   left: 0.8rem;
@@ -77,7 +77,7 @@
   transition: bottom 1s;
 }
 .Buttons-download.Buttons-button-hidden {
-  bottom: -70px;
+  bottom: -4.2rem;
 }
 .Buttons-download button, .Buttons-download a {
   background-position: 0 0;

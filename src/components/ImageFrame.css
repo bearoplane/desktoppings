@@ -12,25 +12,30 @@
 
 .spinner-wrap {
   position: absolute;
-  width: 243px;
-  height: 243px;
+  width: 6rem;
+  height: 6rem;
   top: 50%;
   left: 50%;
-  margin-top: -121px;
-  margin-left: -121px;
+  margin-top: -3rem;
+  margin-left: -3rem;
   z-index: -1;
 }
 
 .spinner-wrap span {
   display: block;
   position: absolute;
-  width: 243px;
-  height: 243px;
+  width: 100%;
+  height: 100%;
+
+  background-size: contain;
+
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
 }
 
 .spinner-wrap span:nth-child(1) {
-  background: url(/images/loader/slice1.png) 100% 100%;
-  animation: appear1 infinite 5s;
+  background-image: url(/images/loader/slice1.png);
+  animation-name: appear1;
 }
 @keyframes appear1 {
   0% { opacity: 0; }
@@ -39,8 +44,8 @@
 }
 
 .spinner-wrap span:nth-child(2) {
-  background: url(/images/loader/slice2.png) 100% 100%;
-  animation: appear2 infinite 5s;
+  background-image: url(/images/loader/slice2.png);
+  animation-name: appear2;
 }
 @keyframes appear2 {
   0% { opacity: 0; }
@@ -50,8 +55,8 @@
 }
 
 .spinner-wrap span:nth-child(3) {
-  background: url(/images/loader/slice3.png) 100% 100%;
-  animation: appear3 infinite 5s;
+  background-image: url(/images/loader/slice3.png);
+  animation-name: appear3;
 }
 @keyframes appear3 {
   0% { opacity: 0; }
@@ -61,8 +66,8 @@
 }
 
 .spinner-wrap span:nth-child(4) {
-  background: url(/images/loader/slice4.png) 100% 100%;
-  animation: appear4 infinite 5s;
+  background-image: url(/images/loader/slice4.png);
+  animation-name: appear4;
 }
 @keyframes appear4 {
   0% { opacity: 0; }
@@ -72,8 +77,8 @@
 }
 
 .spinner-wrap span:nth-child(5) {
-  background: url(/images/loader/slice5.png) 100% 100%;
-  animation: appear5 infinite 5s;
+  background-image: url(/images/loader/slice5.png);
+  animation-name: appear5;
 }
 @keyframes appear5 {
   0% { opacity: 0; }
@@ -83,8 +88,8 @@
 }
 
 .spinner-wrap span:nth-child(6) {
-  background: url(/images/loader/slice6.png) 100% 100%;
-  animation: appear6 infinite 5s;
+  background-image: url(/images/loader/slice6.png);
+  animation-name: appear6;
 }
 @keyframes appear6 {
   0% { opacity: 0; }
@@ -94,8 +99,8 @@
 }
 
 .spinner-wrap span:nth-child(7) {
-  background: url(/images/loader/slice7.png) 100% 100%;
-  animation: appear7 infinite 5s;
+  background-image: url(/images/loader/slice7.png);
+  animation-name: appear7;
 }
 @keyframes appear7 {
   0% { opacity: 0; }
@@ -105,49 +110,14 @@
 }
 
 .spinner-wrap span:nth-child(8) {
-  background: url(/images/loader/slice8.png) 100% 100%;
-  animation: appear8 infinite 5s;
+  background-image: url(/images/loader/slice8.png);
+  animation-name: appear8;
 }
 @keyframes appear8 {
   0% { opacity: 0; }
   70% { opacity: 0; }
   80% { opacity: 100; }
   100% { opacity: 100; }
-}
-
-/*
-.image-wrap:after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: -50%;
-  left: -50%;
-  z-index: -1;
-  background: url(/images/loader.png) 50% 50% repeat;
-  background-repeat: no-repeat;
-  transform: rotate(0deg);
-  animation: Loader-spin infinite 3s ease-in-out;
-}
-*/
-
-@keyframes appear {
-  from { opacity: 0; }
-  to { opacity: 100; }
-}
-@keyframes shown {
-  from { opacity: 100; }
-  to { opacity: 100; }
-}
-@keyframes ishidden {
-  from { opacity: 0; }
-  to { opacity: 0; }
-}
-
-
-@keyframes Loader-anim {
-  from { opacity: 0; }
-  to { opacity: 100; }
 }
 
 .image-wrap-image {

@@ -29,5 +29,5 @@ class ImageFrame extends Component {
     )
   }
 }
-//
+
 export default ImageFrame

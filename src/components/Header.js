@@ -2,8 +2,8 @@ import React from 'react'
 
 import './Header.css'
 
-const Header = () => (
-  <div className="Header">
+const Header = ({ timedOut }) => (
+  <div className={timedOut ? 'Header Header-hidden' : 'Header'}>
     <h1 className="Header-title">&ldquo;Desktoppings!&rdquo;</h1>
     <div className="Header-checkers">
       { new Array(30).fill(true).map((v, i) => <span key={i} className="Header-checkers-square"></span>) }
