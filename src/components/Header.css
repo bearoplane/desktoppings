@@ -87,6 +87,14 @@
   background-position: -3.2rem -12.8rem;
 }
 
+.Header-button-store {
+  background-image: url('/images/store.png');
+  background-size: 3.2rem 3.2rem;
+}
+.Header-button-store:hover {
+  background-image: url('/images/store_over.png');
+  background-size: 3.2rem 3.2rem;
+}
 
 @media only screen and (min-width : 480px) {
 

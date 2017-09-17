@@ -2,6 +2,13 @@ import React, { Component } from 'react'
 
 import './ImageFrame.css'
 
+const LoadingSpinner = () => (
+  <div className="spinner-wrap">
+    <span /><span /><span /><span />
+    <span /><span /><span /><span />
+  </div>
+)
+
 class ImageFrame extends Component {
   constructor(props) {
     super(props)
@@ -16,10 +23,11 @@ class ImageFrame extends Component {
 
     return (
       <div className="image-wrap">
-        <div className="image-wrap-image" style={{ backgroundImage: `url(${image})` }} />
+        <LoadingSpinner />
+        <div style={{ backgroundImage: `url(${image})` }} className="image-wrap-image" />
       </div>
     )
   }
 }
-
+//
 export default ImageFrame
