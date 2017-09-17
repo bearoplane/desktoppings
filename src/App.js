@@ -17,7 +17,7 @@ const numImages = 7
 const map = {
   'moveLeft': 'left',
   'moveRight': 'right',
-  'download': 'down'
+  'download': { sequence: 'down', action: 'keydown' }
 };
 
 class App extends Component {
@@ -29,6 +29,7 @@ class App extends Component {
 
     this.showButtons = debounce(this.showButtons, 500, { leading: true })
     this.selectImage = debounce(this.selectImage, 500, { leading: true })
+    this.download = debounce(this.download, 1000, { leading: true })
 
     this.timer = null
     this.state = {
@@ -45,6 +46,9 @@ class App extends Component {
     clearTimeout(this.timer)
   }
 
+  download = () => {
+    this.refs.buttons.forceDownload()
+  }
   selectImage = (dir) => {
     const { cur } = this.state
 
@@ -73,8 +77,9 @@ class App extends Component {
     const { cur, timedOut, visited } = this.state
 
     const handlers = {
-      left: e => { e.preventDefault(); this.selectImage(-1); },
-      right: e => { e.preventDefault(); this.selectImage(1) }
+      left: e => { e.preventDefault(); this.selectImage(-1) },
+      right: e => { e.preventDefault(); this.selectImage(1) },
+      down: e => { e.preventDefault(); this.download() }
     }
 
     const autofocus = (el) => {
@@ -88,7 +93,7 @@ class App extends Component {
       <HotKeys ref={autofocus} keyMap={map} handlers={handlers}>
         <div className="App" onMouseMove={this.showButtons}>
           <Header timedOut={timedOut} />
-          <Buttons cur={cur} selectImage={this.selectImage} timedOut={timedOut} />
+          <Buttons ref="buttons" cur={cur} selectImage={this.selectImage} timedOut={timedOut} />
           <BigImage cur={cur} />
           { visited ? null : <Sticker /> }
         </div>

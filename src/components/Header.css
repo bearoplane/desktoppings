@@ -23,7 +23,7 @@
 
   font-size: 1em;
 
-  transition: top 1s;
+  transition: top 0.5s ease-out;
 }
 .Header.Header-hidden {
   top: -4.2rem;

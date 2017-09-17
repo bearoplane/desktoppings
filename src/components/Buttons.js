@@ -5,8 +5,13 @@ import { HotKeys } from 'react-hotkeys'
 
 import './Buttons.css'
 
+const map = {
+  'download': 'down'
+};
+
 class Buttons extends Component {
   forceDownload = () => {
+    console.log('downloading')
     this.refs.downloadButton.click()
   }
 
@@ -16,11 +21,11 @@ class Buttons extends Component {
     const extraClasses = timedOut ? "Buttons-button-hidden" : ""
 
     const handlers = {
-      'download': this.forceDownload
+      down: e => { e.preventDefault(); this.forceDownload() }
     }
 
     return (
-      <HotKeys handlers={handlers}>
+      <HotKeys keyMap={map} handlers={handlers}>
         <div className="Buttons">
           <div className={`Buttons-button Buttons-left ${extraClasses}`}>
             <button onClick={() => selectImage(-1)}></button>
