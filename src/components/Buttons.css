@@ -1,3 +1,10 @@
+.Buttons {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
 .Buttons-button {
   position: fixed;
 
@@ -31,6 +38,10 @@
   top: 50%;
   margin-top: -2.4rem;
   width: 4.7rem;
+  transition: left 1s;
+}
+.Buttons-left.Buttons-button-hidden {
+  left: -70px;
 }
 .Buttons-left button, .Buttons-left a {
   left: auto;
@@ -46,6 +57,10 @@
   top: 50%;
   margin-top: -2.4rem;
   width: 4.7rem;
+  transition: right 1s;
+}
+.Buttons-right.Buttons-button-hidden {
+  right: -70px;
 }
 .Buttons-right button, .Buttons-right a {
   left: 0.8rem;
@@ -59,6 +74,10 @@
   bottom: 0;
   left: 50%;
   margin-left: -2.4rem;
+  transition: bottom 1s;
+}
+.Buttons-download.Buttons-button-hidden {
+  bottom: -70px;
 }
 .Buttons-download button, .Buttons-download a {
   background-position: 0 0;

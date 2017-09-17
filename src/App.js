@@ -21,6 +21,7 @@ class App extends Component {
     super(props)
 
     this.busy = false
+    this.timer = null
     this.state = {
       cur: 0
     }
@@ -31,9 +32,12 @@ class App extends Component {
 
     if (this.busy) return
 
+    // Clear any existing timeout
+    clearTimeout(this.timer)
+
     this.busy = true
 
-    setTimeout(() => { this.busy = false }, 500)
+    this.timer = setTimeout(() => { this.busy = false }, 500)
 
     this.setState({
       cur: (cur + dir) < 0 ? numImages - 1 : (cur + dir) % numImages
