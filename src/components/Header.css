@@ -96,7 +96,7 @@
   background-image: url('/images/store.png');
   background-size: 3.2rem 3.2rem;
   background-position: center center;
-  width: 3rem;
+  width: 2.5rem;
 }
 .Header-button-store:hover {
   background-image: url('/images/store_over.png');

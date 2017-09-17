@@ -17,4 +17,22 @@
   top: 50%;
   margin-left: -6rem;
   margin-top: -6rem;
+
+  animation: fade-out 10s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
