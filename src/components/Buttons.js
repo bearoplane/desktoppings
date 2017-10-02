@@ -11,7 +11,6 @@ const map = {
 
 class Buttons extends Component {
   forceDownload = () => {
-    console.log('downloading')
     this.refs.downloadButton.click()
   }
 

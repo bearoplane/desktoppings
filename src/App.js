@@ -65,7 +65,7 @@ class App extends Component {
       timedOut: false
     })
 
-    this.timer = setTimeout(this.hideButtons, 5000)
+    this.timer = setTimeout(this.hideButtons, 2500)
   }
   hideButtons = () => {
     this.setState({
@@ -96,6 +96,7 @@ class App extends Component {
           <Buttons ref="buttons" cur={cur} selectImage={this.selectImage} timedOut={timedOut} />
           <BigImage cur={cur} />
           { visited ? null : <Sticker /> }
+          <Sticker />
         </div>
       </HotKeys>
     )
